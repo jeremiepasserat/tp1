@@ -15,70 +15,60 @@ public class ConvertisseurDeNombreRomainTest {
         convertisseurDeNombreRomain = new ConvertisseurDeNombreRomain();
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainIDevraitDonner1() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("I");
         assertThat(nombre).isEqualTo(1);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainVDevraitDonner5() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("V");
         assertThat(nombre).isEqualTo(5);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainXDevraitDonner10() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("X");
         assertThat(nombre).isEqualTo(10);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainIIDevraitDonner2() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("II");
         assertThat(nombre).isEqualTo(2);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainIIIDevraitDonner3() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("III");
         assertThat(nombre).isEqualTo(3);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainVIDevraitDonner6() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("VI");
         assertThat(nombre).isEqualTo(6);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainIVDevraitDonner4() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("IV");
         assertThat(nombre).isEqualTo(4);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainIXDevraitDonner9() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("IX");
         assertThat(nombre).isEqualTo(9);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainXLIXDevraitDonner49() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("XLIX");
         assertThat(nombre).isEqualTo(49);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainXCIXDevraitDonner99() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("XCIX");
