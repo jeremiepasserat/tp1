@@ -75,28 +75,24 @@ public class ConvertisseurDeNombreRomainTest {
         assertThat(nombre).isEqualTo(99);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainCCCXLVIDevraitDonner346() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("CCCXLVI");
         assertThat(nombre).isEqualTo(346);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainCCCXCIXDevraitDonner399() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("CCCXCIX");
         assertThat(nombre).isEqualTo(399);
     }
 
-    @Ignore
     @Test
     public void leChiffreRomainMMMMDCCCLXXXVIIIDevraitDonner4888() {
         int nombre = convertisseurDeNombreRomain.enNombreArabe("MMMMDCCCLXXXVIII");
         assertThat(nombre).isEqualTo(4888);
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException.class)
     public void leChiffreRomainICDevraitDonnerUneException() {
         convertisseurDeNombreRomain.enNombreArabe("IC");
