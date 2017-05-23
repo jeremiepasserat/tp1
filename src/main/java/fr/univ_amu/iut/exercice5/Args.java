@@ -1,11 +1,15 @@
 package fr.univ_amu.iut.exercice5;
 
-import java.util.List;
-
 import static fr.univ_amu.iut.exercice5.ArgsException.ErrorCode.INVALID_ARGUMENT_NAME;
 
 public class Args {
-    public Args(String schema, String[] strings) throws ArgsException {
+    public Args(String schema, String[] args) throws ArgsException {
+        parseSchema(schema);
+        parseArgumentStrings(args);
+        throw new RuntimeException("Not yet implemented !");
+    }
+
+    public boolean has(char arg) {
         throw new RuntimeException("Not yet implemented !");
     }
 
@@ -18,10 +22,6 @@ public class Args {
     }
 
     public String getString(char arg) {
-        throw new RuntimeException("Not yet implemented !");
-    }
-
-    public boolean has(char arg) {
         throw new RuntimeException("Not yet implemented !");
     }
 
@@ -48,7 +48,7 @@ public class Args {
         throw new RuntimeException("Not yet implemented !");
     }
 
-    private void parseArgumentStrings(List<String> argsList) throws ArgsException {
+    private void parseArgumentStrings(String[] argsList) throws ArgsException {
         throw new RuntimeException("Not yet implemented !");
     }
 
