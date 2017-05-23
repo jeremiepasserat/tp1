@@ -6,7 +6,8 @@ public class Robot {
     private Orientation orientation;
 
     public Robot(GridPosition gridPosition, Orientation orientation) {
-        throw new RuntimeException("Not yet implemented !");
+        this.gridPosition=gridPosition;
+        this.orientation=orientation;
     }
 
     public GridPosition getGridPosition() {
@@ -18,15 +19,53 @@ public class Robot {
     }
 
     public void turnRight() {
-        throw new RuntimeException("Not yet implemented !");
+        if (this.orientation== Orientation.EAST)
+            this.orientation = Orientation.SOUTH;
+        else
+        if (this.orientation== Orientation.SOUTH)
+            this.orientation = Orientation.WEST;
+        else
+        if (this.orientation== Orientation.WEST)
+            this.orientation = Orientation.NORTH;
+        else
+        if (this.orientation== Orientation.NORTH)
+            this.orientation = Orientation.EAST;
+
     }
 
     public void turnLeft() {
-        throw new RuntimeException("Not yet implemented !");
+
+        if (this.orientation== Orientation.EAST)
+            this.orientation = Orientation.NORTH;
+        else
+        if (this.orientation== Orientation.SOUTH)
+            this.orientation = Orientation.EAST;
+        else
+        if (this.orientation== Orientation.WEST)
+            this.orientation = Orientation.SOUTH;
+        else
+        if (this.orientation== Orientation.NORTH)
+            this.orientation = Orientation.WEST;
+
+
+
     }
 
     public void advance() {
-        throw new RuntimeException("Not yet implemented !");
+        if (this.orientation== Orientation.EAST)
+            gridPosition.setX(gridPosition.getX()+1);
+        else
+        if (this.orientation== Orientation.SOUTH)
+            gridPosition.setY(gridPosition.getY()-1);
+
+        else
+        if (this.orientation== Orientation.WEST)
+            gridPosition.setX(gridPosition.getX()-1);
+
+        else
+        if (this.orientation== Orientation.NORTH)
+            gridPosition.setY(gridPosition.getY()+1);
+
     }
 }
 

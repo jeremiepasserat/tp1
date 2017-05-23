@@ -1,5 +1,6 @@
 package fr.univ_amu.iut.exercice4;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RobotSimulator {
@@ -12,10 +13,25 @@ public class RobotSimulator {
     }
 
     public void simulate() {
-        throw new RuntimeException("Not yet implemented !");
+
+
+        for (int i = 0; i < instructions.length(); ++i) {
+            char c = instructions.charAt(i);
+            if (c == 'R')
+                robot.turnRight();
+            else if (c == 'L')
+                robot.turnLeft();
+            else
+                robot.advance();
+        }
     }
 
     public List<Movement> getMovements() {
-        throw new RuntimeException("Not yet implemented !");
+        ArrayList<Movement> var = new ArrayList<>();
+        for (char c : instructions.toCharArray())
+        {
+            var.add(Movement.getMovement(c));
+        }
+        return var;
     }
 }
