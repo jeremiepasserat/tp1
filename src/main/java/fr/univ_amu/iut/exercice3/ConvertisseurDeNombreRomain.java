@@ -31,15 +31,27 @@ public class ConvertisseurDeNombreRomain {
 
         int solution = 0;
         for (int c = 0; c < i.length(); ++c) {
-            int d=1;
-            if (enChiffreArabe(i.charAt(d)) > enChiffreArabe(i.charAt(c))) {
-                solution = enChiffreArabe(i.charAt(d)) - enChiffreArabe(i.charAt(c));
-                ++c;
-            }
+            char lettre = i.charAt(c);
+
+            char lettresuiv;
+
+            if (c+1 < i.length())
+                lettresuiv = i.charAt(c + 1);
+
             else
-                if (enChiffreArabe(i.charAt(d)) <= enChiffreArabe(i.charAt(c)))
-                solution = enChiffreArabe(i.charAt(c)) + solution;
+                lettresuiv = '0';
+
+            if (enChiffreArabe(lettresuiv) > enChiffreArabe(lettre)) {
+                if (enChiffreArabe(lettre) * 10 < enChiffreArabe(lettresuiv))
+                    throw new IllegalArgumentException("That is impossible");
+                solution -= enChiffreArabe(lettre);
+
+
+            } else
+                solution += enChiffreArabe(lettre);
         }
         return solution;
     }
 }
+
+
